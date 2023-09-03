@@ -8,40 +8,21 @@ function TodoListOne() {
         {id:'3', title:'찜질방가서 잠자기', hashCode:['#찜질방','#식혜', '#계란'], time:'10분30초', status:'끝낼 것'},
     ]
     let [toDo, toFinish] = useState(data);
-
-
-      function Data({ data }) {
+    //fiter로 
+    let workList = toDo.filter((list) => list.status ==='할 것');
+      function Data({ workList }) {
         return (
             <div>
-            <p>{data.title}</p>
-            <p>{data.hashCode}</p>
-            <p>{data.title}</p> ;
+            <p>{workList.title}</p>
+            <p>{workList.hashCode}</p>
+            <p>{workList.time}</p>
     </div>
         );
       }
-      
-
-    //         if (data[i].status === '할 것') {
-    //             content += <div><p>data[i].title</p>
-    //             <p>data[i].hashCode</p>
-    //             <p>data[i].time</p>
-    //             </div>;
-    //         }
-    //     }
-    // } else {
-    //     for (let i = 0; i < data.length; i++) {
-    //         if (data[i].status === '끝낼 것') {
-    //             content += <div><p>data[i].title</p>
-    //             <p>data[i].hashCode</p>
-    //             <p>data[i].time</p>
-    //             </div>;
-    //         }
-    //     }
-    // }
     return (
         <div>
-          {data.map(data => (
-            <Data data={data} />
+          {workList.map(workList => (
+            <Data workList={workList} />
           ))}
         </div>
       );

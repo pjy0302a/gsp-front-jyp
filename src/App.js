@@ -6,6 +6,7 @@ import TodoNav from './TodoNav.js';
 import TodoList from './TodoList.js';
 import TodoListOne from './TodoListOne.js';
 
+
 function AddButton(){
   //Create 버튼을 클릭하면 카드추가 입력 modal 생성
   return <div>
@@ -25,7 +26,7 @@ function ListOne(){
 function App() {
   return ( 
     <div>
-      <TodoHeader></TodoHeader>
+      <TodoHeader name="박진영"></TodoHeader>
       <TodoNav></TodoNav>
       <TodoList></TodoList>
       <TodoListOne></TodoListOne> 
