@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 
 function TodoListOne(props) {
-  console.log(props);
 
     function Data({ workList }) {
       return (
